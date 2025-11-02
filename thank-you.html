@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appointment Confirmed | Total Pain Care Clinic</title>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T36VS9DJ');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5fafc;
+        text-align: center;
+        padding: 60px 15px;
+        color: #333;
+    }
+    .box {
+        background: white;
+        max-width: 450px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.12);
+    }
+    h1 {
+        color: #0077cc;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    a.whatsapp-btn {
+        display: inline-block;
+        background: #25D366;
+        color: white;
+        padding: 14px 22px;
+        border-radius: 8px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    a.whatsapp-btn:hover {
+        background: #1da851;
+    }
+</style>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T36VS9DJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="box">
+    <h1>Thank You! Our Team Will Contact You Soon.</h1>
+    <p>Your appointment request is received.</p>
+    <p>To confirm your booking faster, please message us on WhatsApp.</p>
+
+    <a class="whatsapp-btn" id="whatsappLink" href="https://wa.me/919834889938?text=Hello%2C%20I%20want%20to%20confirm%20my%20appointment." target="_blank">
+        Confirm on WhatsApp
+    </a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappLink = document.getElementById('whatsappLink');
+    const storedMessage = localStorage.getItem('whatsappMessage');
+    if (storedMessage && whatsappLink) {
+        whatsappLink.href = `https://wa.me/919834889938?text=${storedMessage}`;
+    }
+});
+</script>
+</body>
+</html>

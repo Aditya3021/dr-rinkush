@@ -99,11 +99,11 @@ function initFormHandling() {
 
       const text = encodeURIComponent(lines.join('\n'));
 
-      // Target WhatsApp number (clinic). Use full international format without + for wa.me
-      const waNumber = '9198348 89938';
-      const waUrl = `https://wa.me/${waNumber}?text=${text}`;
+      // Store the WhatsApp message in localStorage for the thank-you page
+      localStorage.setItem('whatsappMessage', text);
 
-      window.location.href = waUrl;
+      // Redirect to thank-you page after form submission
+      window.location.href = 'thank-you.html';
     } else {
       alert('Please fill in all required fields.');
     }

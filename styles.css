@@ -271,6 +271,18 @@ body {
     border-color: var(--accent-teal);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-navy);
+    border-color: var(--white);
+}
+
 /* Award Banner */
 .credentials-bar {
     background: var(--gray-100);
